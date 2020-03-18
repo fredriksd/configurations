@@ -1,0 +1,19 @@
+function __git_ps1()
+{
+   (echo -n '(' && git rev-parse --abbrev-ref HEAD 2> /dev/null | tr -d '\n' && echo  -n ')') | sed 's/()//'
+}
+
+function branches()
+{
+  git branch -a | sed 's/^[^\w+]//g' 
+}
+
+function sb()
+{
+   local branches=`git branch -a | sed 's/^[^\w+]//g'`
+   select branch in ${branches} 
+   do
+      git checkout ${branch}
+      return
+   done
+}
