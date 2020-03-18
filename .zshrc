@@ -18,6 +18,7 @@ autoload -U compinit && compinit
 _comp_options+=(globdots)
 zstyle ':completion:*' special-dirs true 
 zstyle ':completion:*' menu select 
+CASE_SENSITIVE="true"
 zmodload zsh/complist
 
 #Bindings for vim navigation.
