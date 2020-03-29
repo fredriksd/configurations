@@ -13,9 +13,10 @@ set expandtab
 set autoindent
 set laststatus=2
 set noshowmode
+
 " let Vundle manage Vundle, required
-"
 Plugin 'VundleVim/Vundle.vim'
+
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -40,5 +41,3 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 set encoding=utf-8
 map <C-o> :NERDTreeToggle<CR>
-" Auto-complete
-"Bundle 'Valloric/YouCompleteMe'

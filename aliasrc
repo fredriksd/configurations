@@ -1,2 +1,2 @@
 alias ll='ls -l' 
-alias v='vim'
+alias v='nvim'
