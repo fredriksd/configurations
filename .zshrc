@@ -1,14 +1,17 @@
 #Fredrik's zsh config
 
+setopt prompt_subst
+
 [ -f "$HOME/zsh/aliasrc" ] && source "$HOME/zsh/aliasrc"
-[ -f "$HOME/zsh/.zsh_functions" ] && source "$HOME/zsh/.zsh_functions"
 
 fpath=(/home/fredrsa/zsh/plugins/zsh-completions/src
-$fpath
+       ~/zsh/.zfunc
+       $fpath
 )
 
+autoload -U git_ps1
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[magenta]%}%~%{$fg[yellow]%}$(git_ps1)%{$fg[red]%}]%{$reset_color%}$%b '
 
 HISTSIZE=10000
 SAVEHIST=10000
