@@ -1,0 +1,8 @@
+#!/bin/sh
+#Script to prettify the status output from git and will be used as information to the prompt. 
+
+statuses=`git status --short`
+modified=`echo "${statuses}" | grep -cE "M\s*"`
+added=`echo "${statuses}" | grep -cE "A\s*"`
+untracked=`echo "${statuses}" | grep -cE "U\s*"`
+

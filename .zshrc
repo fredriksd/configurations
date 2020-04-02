@@ -9,7 +9,7 @@ fpath=(/home/fredrsa/zsh/plugins/zsh-completions/src
        $fpath
 )
 
-autoload -U git_ps1
+autoload -Uz git_ps1
 autoload -U colors && colors
 PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[magenta]%}%~%{$fg[yellow]%}$(git_ps1)%{$fg[red]%}]%{$reset_color%}$%b '
 
