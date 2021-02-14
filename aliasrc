@@ -1,0 +1,5 @@
+alias ll='ls -l' 
+alias vim='nvim'
+alias h='history'
+alias grep='grep --color=auto'
+alias sp='sudo pacman'
